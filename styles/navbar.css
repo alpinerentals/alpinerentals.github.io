@@ -1,0 +1,54 @@
+.navbar-title {
+    font-weight: 650;
+    font-size: 25px;
+    vertical-align: middle;
+    color: rgb(54, 79, 105);
+}
+
+#navbar {
+    background-color: #f1f1f1;
+    padding: 12px 10px; /* Large padding which will shrink on scroll (using JS) */
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    position: fixed; /* Sticky/fixed navbar */
+    width: 100%;
+    top: 0; /* At the top */
+    z-index: 99;
+  }
+
+  .navbar li{
+    font-size: 1.25em !important;
+}
+
+
+  @media screen and (max-width: 580px) {
+    #navbar {
+      padding: 5px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+    }
+    #navbar a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+  
+  .cart {
+    font-size: 30px;
+  }
+
+  .cart_item_number {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    color: rgb(92, 137, 160);
+    font-weight: 550 !important;
+    font: 25px Arial, sans-serif;
+    text-align: center;
+  }
+
+  
+  .navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}

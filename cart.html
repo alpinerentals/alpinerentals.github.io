@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://fontawesome.com/license -->
+
+<head>
+  <meta charset="utf-8">
+  <title>Alpine Rentals</title>
+  <link rel="shortcut icon" href="./res/transparent_logo.png" />
+  <link rel="stylesheet" type="text/css" href="./styles/cart.css">
+  <link rel="stylesheet" type="text/css" href="./styles/index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-
+   B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./styles/navbar.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-
+     B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <script src="./js/navbar.js" data-rel-js></script>
+
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="./styles/base.css" data-rel-css="" /> -->
+
+  <script src="./js/index.js" data-rel-js></script>
+
+  <link rel="stylesheet" type="text/css" href="./styles/cart_stripe.css" data-rel-css="" />
+
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand navbar-title">
+        <svg style="width:50px;height:50px; color: rgb(54, 79, 105);" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M14,6L10.25,11L13.1,14.8L11.5,16C9.81,13.75 7,10 7,10L1,18H23L14,6Z" />
+        </svg>
+        <span class="navbar-title">Alpine Rentals</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown" id="navbar-right">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Categories
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="categories/camp_hike.html">Camp & Hike</a>
+              <a class="dropdown-item" href="categories/climbing.html">Climbing</a>
+              <a class="dropdown-item" href="categories/cycle.html">Cycle</a>
+              <a class="dropdown-item" href="categories/paddle.html">Paddle</a>
+              <a class="dropdown-item" href="categories/snow.html">Snow</a>
+              <a class="dropdown-item" href="categories/photo.html">Photography/Drone</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0" style="visibility: hidden; width: 100px;">
+          <input class="form-control mr-sm-2" type="search" placeholder="Find product..." aria-label="Search">
+          <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <a class="nav-link" href="./cart.html">
+          <i class="cart fas fa-shopping-cart" style="color: rgb(95, 143, 167);">
+
+            <span class="cart_item_number">
+              0
+            </span>
+
+          </i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <h1 class="cart-title">Cart</h1>
+
+  <div id="container_cart">
+
+    <hr>
+    <!-- Dynamically generated cart -->
+  </div>
+
+  <!-- Delivery Options -->
+  <div id="total_container">
+    <div id="pickup_option_container">
+      <h5>Please select your delivery options:</h5>
+
+      <input type="radio" id="in-store" name="options" value="in-store" checked>
+      <label for="radio">In Store</label><br>
+
+      <div id="delivery_container">
+        <input type="radio" id="delivery" name="options" value="delivery" style="margin-right: 5px">
+        <label for="delivery" style="margin-right: 5px">Delivery (4% charge)</label><br>
+        <input type="text" id="deliveryAddress" placeholder="Full Delivery Address"><br><br>
+      </div>
+    </div>
+    <div id="total_text_container">
+      <h4 id="total_text">Subtotal: </h4>
+      <h4 id="delivery_fee">Delivery: </h4>
+      <h4 id="real_total">Total: </h4>
+
+    </div>
+  </div>
+
+  <!-- Payment Section and Form -->
+  <div id="container_checkout">
+    <h1>Checkout & Pay</h1>
+
+    <hr>
+
+    <div id="myRadioGroup" style="padding-bottom: 2%;">
+      <input type="radio" name="cars" checked="checked" value="stripe" onclick="shopStripe()" /> Pay with Stripe</br>
+      <input type="radio" name="cars" value="paypal" onclick="paypal()" /> Pay with Paypal
+    </div>
+
+    <div class="cell example example2" id="example-2">
+      <form id="form" name="payForm">
+        <div data-locale-reversible>
+          <div class="row">
+            <div class="field half-width">
+              <input id="example2-name" name="fullName" data-tid="elements_examples.form.address_placeholder"
+                class="input empty" type="text" placeholder="John Smith" required="" autocomplete="address-line1">
+              <label for="example2-name" data-tid="elements_examples.form.address_label">Name</label>
+              <div class="baseline"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field half-width">
+              <input id="example2-address" name="email" data-tid="elements_examples.form.address_placeholder"
+                class="input empty" type="email" placeholder="john.smith@gmail.com" required=""
+                autocomplete="address-line1">
+              <label for="example2-address" data-tid="elements_examples.form.address_label">Email</label>
+              <div class="baseline"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <input id="example2-address" name="address" data-tid="elements_examples.form.address_placeholder"
+                class="input empty" type="text" placeholder="185 Berry St" required="" autocomplete="address-line1">
+              <label for="example2-address" data-tid="elements_examples.form.address_label">Address</label>
+              <div class="baseline"></div>
+            </div>
+          </div>
+          <div class="row" data-locale-reversible>
+            <div class="field half-width">
+              <input id="example2-city" name="city" data-tid="elements_examples.form.city_placeholder"
+                class="input empty" type="text" placeholder="San Francisco" required="" autocomplete="address-level2">
+              <label for="example2-city" data-tid="elements_examples.form.city_label">City</label>
+              <div class="baseline"></div>
+            </div>
+            <div class="field quarter-width">
+              <input id="example2-state" name="state" data-tid="elements_examples.form.state_placeholder"
+                class="input empty" type="text" placeholder="CA" required="" autocomplete="address-level1">
+              <label for="example2-state" data-tid="elements_examples.form.state_label">State</label>
+              <div class="baseline"></div>
+            </div>
+            <div class="field quarter-width">
+              <input id="example2-zip" name="zip" data-tid="elements_examples.form.postal_code_placeholder"
+                class="input empty" type="text" placeholder="94107" required="" autocomplete="postal-code">
+              <label for="example2-zip" data-tid="elements_examples.form.postal_code_label">ZIP</label>
+              <div class="baseline"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <input id="example2-address" name="card" data-tid="elements_examples.form.address_placeholder"
+              class="input empty" type="text" placeholder="4242-4242-4242-4242" required=""
+              autocomplete="address-line1">
+            <label for="example2-card-number" data-tid="elements_examples.form.card_number_label">Card number</label>
+            <div class="baseline"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field half-width">
+            <input id="example2-address" name="expiration" data-tid="elements_examples.form.address_placeholder"
+              class="input empty" type="text" placeholder="06/23" required="" autocomplete="address-line1">
+            <label for="example2-card-expiry" data-tid="elements_examples.form.card_expiry_label">Expiration</label>
+            <div class="baseline"></div>
+          </div>
+          <div class="field half-width">
+            <input id="example2-address" name="CVC" data-tid="elements_examples.form.address_placeholder"
+              class="input empty" type="text" placeholder="424" required="" autocomplete="address-line1">
+            <label for="example2-card-cvc" data-tid="elements_examples.form.card_cvc_label">CVC</label>
+            <div class="baseline"></div>
+          </div>
+        </div>
+        <button type="submit" value="submit" id="pay_button" data-tid="elements_examples.form.pay_button">Pay</button>
+
+        <!-- <i  class="fas fa-circle-notch fa-spin"></i> -->
+
+      </form>
+
+      <a type="button" target="_blank" href="https://www.paypal.com/us/signin" role="button" class="btn btn-primary"
+        id="paypal" style="border: none; background-color: rgb(115, 175, 243) !important;">Pay with <img width="70px"
+          height="22px" src="./res/paypal.png"></a>
+
+    </div>
+
+    <!-- Payment successful message -->
+    <div class="success" style="display:none;">
+      <div class="icon">
+        <svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <circle class="border" cx="42" cy="42" r="40" stroke-linecap="round" stroke-width="4" stroke="#000"
+            fill="none"></circle>
+          <path class="checkmark" stroke-linecap="round" stroke-linejoin="round"
+            d="M23.375 42.5488281 36.8840688 56.0578969 64.891932 28.0500338" stroke-width="4" stroke="#000"
+            fill="none"></path>
+        </svg>
+      </div>
+      <h3 class="title" data-tid="elements_examples.success.title">Payment successful</h3>
+      <p class="message"><span data-tid="elements_examples.success.message">Thanks for using Stripe. No money was charged.</span></p>
+      <a class="reset" href="#">
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container py-5" style="margin-bottom: -1.5%; margin-top: 5%;">
+      <div class="row">
+        <div class="col-12 col-md">
+          <svg style="width:50px;height:50px" style="color: rgb(54, 79, 105);" viewBox="0 0 24 24">
+            <path style="color: rgb(54, 79, 105);" fill="currentColor"
+              d="M14,6L10.25,11L13.1,14.8L11.5,16C9.81,13.75 7,10 7,10L1,18H23L14,6Z" />
+          </svg>
+          <small class="d-block mb-3 text-muted">Alpine Rentals</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Shop</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="./categories/camp_hike.html">Camp/Hike</a></li>
+            <li><a class="text-muted" href="./categories/climbing.html">Climbing</a></li>
+            <li><a class="text-muted" href="./categories/cycle.html">Cycle</a></li>
+            <li><a class="text-muted" href="./categories/paddle.html">Paddle</a></li>
+            <li><a class="text-muted" href="./categories/photo.html">Photography/Drone</a></li>
+            <li><a class="text-muted" href="./categories/.html">Snow</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="about.html">About Us</a></li>
+            <li><a class="text-muted" href="sources.html">Sources</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Contact</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Email</a></li>
+            <li><a class="text-muted" href="#">Facebook</a></li>
+            <li><a class="text-muted" href="#">Instagram</a></li>
+            <li><a class="text-muted" href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="footerfooter" style="text-align: center; background-color: #f5f5f5;">
+      <span class="text-muted">Copyright &copy; 2020 All Rights Reserved</span>
+    </div>
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyA8qvjuoYOt7jzHgFFMABKdqiedh5yKqMo",
+        authDomain: "e-business2020.firebaseapp.com",
+        databaseURL: "https://e-business2020.firebaseio.com",
+        projectId: "e-business2020",
+        storageBucket: "e-business2020.appspot.com",
+        messagingSenderId: "791894279822",
+        appId: "1:791894279822:web:43fb8bf86953dab847ebdf"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+
+    <script src="./js/cart.js"></script>
+    <script src="./js/cart_stripe.js"></script>
+
+</body>
+
+</html>

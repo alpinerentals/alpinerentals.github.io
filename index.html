@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Alpine Rentals</title>
+  <link rel="shortcut icon" href="./res/transparent_logo.png" />
+  <link rel="stylesheet" type="text/css" href="./styles/index.css">
+  <link rel="stylesheet" type="text/css" href="./styles/navbar.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-
+    B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <script src="./js/navbar.js" data-rel-js></script>
+  <script src="./js/indexpage.js" data-rel-js></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand navbar-title">
+        <svg style="width:50px;height:50px; color: rgb(54, 79, 105);" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M14,6L10.25,11L13.1,14.8L11.5,16C9.81,13.75 7,10 7,10L1,18H23L14,6Z" />
+      </svg>
+        <span class="navbar-title">Alpine Rentals</span>
+      </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item dropdown" id="navbar-right">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Categories
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="categories/camp_hike.html">Camp & Hike</a>
+            <a class="dropdown-item" href="categories/climbing.html">Climbing</a>
+            <a class="dropdown-item" href="categories/cycle.html">Cycle</a>
+            <a class="dropdown-item" href="categories/paddle.html">Paddle</a>
+            <a class="dropdown-item" href="categories/snow.html">Snow</a>
+            <a class="dropdown-item" href="categories/photo.html">Photography/Drone</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0" style="visibility: hidden; width: 100px;">
+        <input class="form-control mr-sm-2" type="search" placeholder="Find product..." aria-label="Search">
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <a class="nav-link" href="./cart.html">
+        <i class="cart fas fa-shopping-cart" style="color: rgb(95, 143, 167);">
+
+          <span class="cart_item_number">
+            0
+          </span>
+
+        </i>
+      </a>
+    </div>
+  </div>
+  </nav>
+
+  <!-- Homepage Jumbotron -->
+  <div class="jumbotron jumbotron_background">
+    <div class="jumbotron_content" style="padding-left: 14%;">
+      <h1 class="display-4 jumbotron_title">Alpine Rentals</h1>
+      <p class="lead jumbotron_body">Selling high quality, and affordable outdoor rental gear, and equipment. </p>
+    </div>
+  </div>
+
+  <!-- Featured Items Cards -->
+  <h1 class="trending_title">Featured Items</h1>
+  <div class="card-columns cards">
+    <div class="card shadow p-3 mb-5 bg-white rounded border-0"  style="height: 20%;">
+      <img src="./res/skis.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Skis</h5>
+        <p class="card-text">Shop from our wide variety of ski brands. </p>
+        <a href="./categories/snow.html" class="btn btn-outline-info">Shop Now!</a>
+      </div>
+    </div>
+    <div class="card shadow p-3 mb-5 bg-white rounded border-0" style="height: 20%;">
+      <img src="./res/bikes.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bikes</h5>
+        <p class="card-text">Rent a mountain, hybrid, road or electric bike.</p>
+        <a href="./categories/cycle.html" class="btn btn-outline-info">Shop Now!</a>
+      </div>
+    </div>
+ 
+    <div class="card shadow p-3 mb-5 bg-white rounded border-0" style="height: 20%;">
+
+      <img src="./res/drones.webp" class="card-img-top" alt="..." style="width: 100%">
+      <div class="card-body">
+        <h5 class="card-title">Drones</h5>
+        <p class="card-text">Check out our newest drones in our shop.</p>
+        <a href="./categories/photo.html" class="btn  btn-outline-info">Shop Now!</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Trending Items Section -->
+  <h1 class="trending_title">Trending Items</h1>
+
+  <div class="grid-container image-card">
+    <div class="grid-item first" onclick="location.href='./categories/cycle.html';" style="cursor: pointer;">
+      <div class="img-txt">Road Bikes</div>
+    </div>
+    <div class="grid-item second" onclick="location.href='./categories/snow.html';" style="cursor: pointer;">
+      <div class="img-txt">Snowboards</div>
+    </div>
+    <div class="grid-item third" onclick="location.href='./categories/climbing.html';" style="cursor: pointer;">
+      <div class="img-txt">Climbing Gear</div>
+    </div>
+    <div class="grid-item fourth" onclick="location.href='./categories/camp_hike.html';" style="cursor: pointer;">
+      <div class="img-txt">Tents</div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="jumbotron jumbotron_background2" style="margin-top: 2%; margin-bottom: 1%;">
+    <div class="about">
+      <h1 class="display-4 jumbotron_title2">About Us</h1>
+      <p class="lead jumbotron_body2">Originally established in 1995, our business has always aimed to provide high quality items to our community at a low and affordable price.</p>
+      <p class="lead jumbotron_button">
+        <a class="btn btn-light btn-lg jumbotron_button" href="about.html" role="button">Learn More</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="container py-5" style="margin-bottom: -1.5%; margin-top: -1.5%;">
+    <div class="row">
+      <div class="col-12 col-md">
+        <svg style="width:50px;height:50px" style="color: rgb(54, 79, 105);" viewBox="0 0 24 24">
+          <path style="color: rgb(54, 79, 105);" fill="currentColor" d="M14,6L10.25,11L13.1,14.8L11.5,16C9.81,13.75 7,10 7,10L1,18H23L14,6Z" />
+      </svg>
+        <small class="d-block mb-3 text-muted">Alpine Rentals</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Shop</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="./categories/camp_hike.html">Camp/Hike</a></li>
+          <li><a class="text-muted" href="./categories/climbing.html">Climbing</a></li>
+          <li><a class="text-muted" href="./categories/cycle.html">Cycle</a></li>
+          <li><a class="text-muted" href="./categories/paddle.html">Paddle</a></li>
+          <li><a class="text-muted" href="./categories/photo.html">Photography/Drone</a></li>
+          <li><a class="text-muted" href="./categories/.html">Snow</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="about.html">About Us</a></li>
+          <li><a class="text-muted" href="sources.html">Sources</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Contact</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Email</a></li>
+          <li><a class="text-muted" href="#">Facebook</a></li>
+          <li><a class="text-muted" href="#">Instagram</a></li>
+          <li><a class="text-muted" href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="footerfooter" style="text-align: center; background-color: #f5f5f5;">
+    <span class="text-muted">Copyright &copy; 2020 All Rights Reserved</span>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

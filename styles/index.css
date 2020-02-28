@@ -1,0 +1,217 @@
+.jumbotron_content {
+    margin-left: 5%;
+    text-align: left; 
+    margin-top: 2%;
+}
+
+.jumbotron_content2 {
+    margin-left: 17%;
+    text-align: left; 
+}
+
+
+.jumbotron_title {
+    color: rgb(63, 92, 122);
+    font-size: 85px !important;
+    font-weight: 700 !important;
+    padding-top: 10%;
+}
+
+.jumbotron_body {
+    color: rgb(63, 92, 122);
+    font-size: 25px !important;
+    font-weight: 550 !important;
+    padding-right: 30%;
+}
+
+.jumbotron_button {
+    width: 200px;
+    margin-top: 2%;
+}
+
+.btn-info,
+.btn-info:hover,
+.btn-info:active,
+.btn-info:visited,
+.btn-info:focus {
+    background-color: #4E7095 !important;
+    border-color: #4E7095 !important;
+}
+
+.footerfooter {
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    background-color: #f5f5f5;
+} 
+
+.jumbotron_background {
+    background: rgba(0, 0, 0, 0.39) url("../res/mountain2.webp");
+    background-blend-mode: darken;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    width: 100%;
+    height: 675px;
+}
+
+.jumbotron_title2 {
+    color: #ececec;
+    font-size: 55px !important;
+    font-weight: 600 !important;
+}
+
+.jumbotron_body2 {
+    color: #ececec;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    padding-right: 15%;
+}
+
+.jumbotron_background2 {
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../res/woods.png");
+    background-blend-mode: darken;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    width: 100%;
+    height: 400px;
+}
+
+.about {
+    margin-top: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.cards {
+    margin-top: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 40px !important;
+    font-weight: 200 !important;
+}
+
+.trending {
+    padding-top: 50px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.trending_title {
+    color: #929292;
+    font-size: 70px !important;
+    font-weight: 700 !important;
+    text-align: center;
+    padding-top: 3%;
+}
+  
+.trending-item {
+    width: calc((100% - 90px) / 4);
+    height: auto;
+    margin-bottom: 60px;
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.trending-image {
+    width: 100%;
+}
+
+.trending-image img{
+    max-width: 100%;
+}
+
+.trending-text {
+    padding-top: 20px;
+    width: 100%;
+}
+
+.trending-price-text {
+    color: grey
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    height: 800px;
+    grid-template-rows: auto;
+    padding-top: 50px;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-bottom: 50px;
+
+  }
+  .grid-item {
+    border: 15px solid white;
+    padding: 40px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .first
+  {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)), url("../res/bike.webp");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .second
+  {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)), url("../res/snowboard.webp");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .third
+  {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)),url("../res/climb.webp");
+    background-position: bottom;
+    background-size: cover;
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+
+  .fourth
+  {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)), url("../res/tent.webp");
+    background-position: bottom;
+    background-size: cover;
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  .image-card {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+  }
+
+  .img-txt {
+    font-size: 50px !important;
+  }
+  

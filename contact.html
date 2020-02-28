@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Alpine Rentals</title>
+  <link rel="shortcut icon" href="./res/transparent_logo.png" />
+  <link rel="stylesheet" type="text/css" href="./styles/contact.css">
+  <link rel="stylesheet" type="text/css" href="./styles/index.css">
+  <link rel="stylesheet" type="text/css" href="./styles/navbar.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384- 
+    B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <script src="./js/navbar.js" data-rel-js></script>    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="./js/contact.js" data-rel-js></script>    
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand navbar-title">
+        <svg style="width:50px;height:50px; color: rgb(54, 79, 105);" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M14,6L10.25,11L13.1,14.8L11.5,16C9.81,13.75 7,10 7,10L1,18H23L14,6Z" />
+      </svg>
+        <span class="navbar-title">Alpine Rentals</span>
+      </a>
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item dropdown" id="navbar-right">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Categories
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="categories/camp_hike.html">Camp & Hike</a>
+            <a class="dropdown-item" href="categories/climbing.html">Climbing</a>
+            <a class="dropdown-item" href="categories/cycle.html">Cycle</a>
+            <a class="dropdown-item" href="categories/paddle.html">Paddle</a>
+            <a class="dropdown-item" href="categories/snow.html">Snow</a>
+            <a class="dropdown-item" href="categories/photo.html">Photography/Drone</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0" style="visibility: hidden; width: 100px;">
+        <input class="form-control mr-sm-2" type="search" placeholder="Find product..." aria-label="Search">
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <a class="nav-link" href="./cart.html">
+        <i class="cart fas fa-shopping-cart" style="color: rgb(95, 143, 167);">
+          
+          <span class="cart_item_number">
+            0
+          </span>
+          
+        </i>
+      </a>
+    </div>
+  </div>
+  </nav>
+
+  <h1>Contact Us</h1>
+
+  <!-- Contact Form -->
+  <div class='content'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-6'>
+          <form role='form' >
+            <div class='form-group'>
+              <label for='name'>Name</label>
+              <input type='text' class='form-control' name='name' placeholder='Enter your full name' value='' required>
+            </div>
+            <div class='form-group'>
+              <label for='email'>E-mail address</label>
+              <input type='email' class='form-control' name='email' placeholder='Enter email' value='' required>
+            </div>
+            <div class='form-group'>
+              <label for='message'>Message</label>
+              <textarea class='form-control' name='message' rows='8' required></textarea>
+            </div>
+            <button type="submit" id="submit_form" class="btn btn-dark" style="width: 100%;" data-tid="elements_examples.form.pay_button">Send</button>
+          </form>
+        </div>
+        <!-- Social Media Icons + Address -->
+        <div class='col-md-1'></div>
+        <div class='col-md-4 sidebar' style="margin-top: 2%;">
+          <a href="">
+            <img width="40px" height="40px" src="./res/icons/facebook.png">
+          </a>
+          <a href="">
+            <img width="40px" height="40px" src="./res/icons/twitter.png">
+          </a>
+          <a href="">
+            <img width="40px" height="40px" src="./res/icons/instagram.png">
+          </a>
+          <hr />
+          <p><strong>Address:</strong><br />
+            Alpine Rentals<br />
+            123 FBLA Avenue<br /></p>
+            <iframe style="margin-top: 2%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.9746236213296!2d-122.0113116842789!3d37.31942877984483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb67f6408f839%3A0x43957e403121df7c!2sCupertino%20High%20School!5e0!3m2!1sen!2sus!4v1581917328023!5m2!1sen!2sus" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>     
+           </div> 
+      </div>
+  </div>
+  <!-- 
+  <div class="success" style="display:none;">
+    <div class="icon">
+      <svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <circle class="border" cx="42" cy="42" r="40" stroke-linecap="round" stroke-width="4" stroke="#000" fill="none"></circle>
+        <path class="checkmark" stroke-linecap="round" stroke-linejoin="round" d="M23.375 42.5488281 36.8840688 56.0578969 64.891932 28.0500338" stroke-width="4" stroke="#000" fill="none"></path>
+      </svg>
+    </div>
+    <h3 class="title" data-tid="elements_examples.success.title">Payment successful</h3>
+    <p class="message"><span data-tid="elements_examples.success.message">Thanks for using Stripe. No money was charged, but we generated a token: </span><span class="token">tok_189gMN2eZvKYlo2CwTBv9KKh</span></p>
+    <a class="reset" href="#">
+    </a>
+  </div> -->
+
+  <!-- Footer -->
+  <footer class="container py-5" style="margin-bottom: -1.5%; margin-top: 6.5%;">
+    <div class="row">
+      <div class="col-12 col-md">
+        <svg style="width:50px;height:50px" style="color: rgb(54, 79, 105);" viewBox="0 0 24 24">
+          <path style="color: rgb(54, 79, 105);" fill="currentColor" d="M14,6L10.25,11L13.1,14.8L11.5,16C9.81,13.75 7,10 7,10L1,18H23L14,6Z" />
+      </svg>
+        <small class="d-block mb-3 text-muted">Alpine Rentals</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Shop</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="./categories/camp_hike.html">Camp/Hike</a></li>
+          <li><a class="text-muted" href="./categories/climbing.html">Climbing</a></li>
+          <li><a class="text-muted" href="./categories/cycle.html">Cycle</a></li>
+          <li><a class="text-muted" href="./categories/paddle.html">Paddle</a></li>
+          <li><a class="text-muted" href="./categories/photo.html">Photography/Drone</a></li>
+          <li><a class="text-muted" href="./categories/.html">Snow</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="about.html">About Us</a></li>
+          <li><a class="text-muted" href="sources.html">Sources</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Contact</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Email</a></li>
+          <li><a class="text-muted" href="#">Facebook</a></li>
+          <li><a class="text-muted" href="#">Instagram</a></li>
+          <li><a class="text-muted" href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="footerfooter" style="text-align: center; background-color: #f5f5f5;">
+    <span class="text-muted">Copyright &copy; 2020 All Rights Reserved</span>
+  </div>
+    
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      
+</body>
+
+</html>

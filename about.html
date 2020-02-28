@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Alpine Rentals</title>
+  <link rel="shortcut icon" href="./res/transparent_logo.png" />
+  <link rel="stylesheet" type="text/css" href="./styles/about.css">
+  <link rel="stylesheet" type="text/css" href="./styles/navbar.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-
+      B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <script src="./js/navbar.js" data-rel-js></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <script src="./js/about.js" data-rel-js></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand navbar-title">
+        <svg style="width:50px;height:50px; color: rgb(54, 79, 105);" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M14,6L10.25,11L13.1,14.8L11.5,16C9.81,13.75 7,10 7,10L1,18H23L14,6Z" />
+        </svg>
+        <span class="navbar-title">Alpine Rentals</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown" id="navbar-right">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Categories
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="categories/camp_hike.html">Camp & Hike</a>
+              <a class="dropdown-item" href="categories/climbing.html">Climbing</a>
+              <a class="dropdown-item" href="categories/cycle.html">Cycle</a>
+              <a class="dropdown-item" href="categories/paddle.html">Paddle</a>
+              <a class="dropdown-item" href="categories/snow.html">Snow</a>
+              <a class="dropdown-item" href="categories/photo.html">Photography/Drone</a>
+            </div>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html">About Us <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0" style="visibility: hidden; width: 100px;">
+          <input class="form-control mr-sm-2" type="search" placeholder="Find product..." aria-label="Search">
+          <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <a class="nav-link" href="./cart.html">
+          <i class="cart fas fa-shopping-cart" style="color: rgb(95, 143, 167);">
+
+            <span class="cart_item_number">
+              0
+            </span>
+
+          </i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Us Title -->
+  <div class="jumbotron jumbotron_background">
+    <div class="jumbotron_content">
+      <h1 class="display-4 jumbotron_title">About Us</h1>
+    </div>
+  </div>
+
+  <!-- Who We Are Section -->
+  <div class="about_content">
+    <h1 class="about_title">Who We Are</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-5"> <span class="about_body">
+            Originally established in 1995, we have always aimed to provide high quality items to our community at a low
+            and affordable price. Our business, located in the heart of Silicon Valley has served over 100,000 people.
+          </span>
+        </div>
+        <div class="col-7">
+          <img src="./res/mountain.webp" class="about_img about_shadow">
+        </div>
+      </div>
+    </div>
+
+    <!-- What We Do Section -->
+    <h1 class="about_title" style="margin-top: 6%; padding-bottom: 1%;">What We Do</h1>
+    <div class="container" style="margin-bottom: 5%;">
+      <div class="row">
+        <div class="col-7">
+          <img src="./res/meeting.webp" class="about_img about_shadow">
+        </div>
+        <div class="col-5"> <span class="about_body">We provide cheap and high quality rentals for explorers and
+            adventurers. Since 1995, our mission has remained unchanged: provide a variey of high quality rental
+            products to our community. Our store has more than 20 different kinds of brands that can be rented.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="container py-5" style="margin-bottom: -1.5%; margin-top: 6.5%;">
+    <div class="row">
+      <div class="col-12 col-md">
+        <svg style="width:50px;height:50px" style="color: rgb(54, 79, 105);" viewBox="0 0 24 24">
+          <path style="color: rgb(54, 79, 105);" fill="currentColor"
+            d="M14,6L10.25,11L13.1,14.8L11.5,16C9.81,13.75 7,10 7,10L1,18H23L14,6Z" />
+        </svg>
+        <small class="d-block mb-3 text-muted">Alpine Rentals</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Shop</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="./categories/camp_hike.html">Camp/Hike</a></li>
+          <li><a class="text-muted" href="./categories/climbing.html">Climbing</a></li>
+          <li><a class="text-muted" href="./categories/cycle.html">Cycle</a></li>
+          <li><a class="text-muted" href="./categories/paddle.html">Paddle</a></li>
+          <li><a class="text-muted" href="./categories/photo.html">Photography/Drone</a></li>
+          <li><a class="text-muted" href="./categories/.html">Snow</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="about.html">About Us</a></li>
+          <li><a class="text-muted" href="sources.html">Sources</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Contact</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Email</a></li>
+          <li><a class="text-muted" href="#">Facebook</a></li>
+          <li><a class="text-muted" href="#">Instagram</a></li>
+          <li><a class="text-muted" href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="footerfooter" style="text-align: center; background-color: #f5f5f5;">
+    <span class="text-muted">Copyright &copy; 2020 All Rights Reserved</span>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

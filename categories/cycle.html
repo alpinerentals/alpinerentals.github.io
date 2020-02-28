@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://fontawesome.com/license -->
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="../styles/category.css">
+  <link rel="stylesheet" type="text/css" href="../styles/index.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../styles/navbar.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+
+
+  <script src="../js/navbar.js" data-rel-js></script>
+
+  <link rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+  integrity="sha384-
+   B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand navbar-title">
+        <svg style="width:50px;height:50px; color: rgb(54, 79, 105);" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M14,6L10.25,11L13.1,14.8L11.5,16C9.81,13.75 7,10 7,10L1,18H23L14,6Z" />
+      </svg>
+        <span class="navbar-title">Alpine Rentals</span>
+      </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+
+        <li class="nav-item dropdown active" id="navbar-right">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Categories <span class="sr-only">(current)</span>
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="camp_hike.html">Camp & Hike</a>
+            <a class="dropdown-item" href="climbing.html">Climbing</a>
+            <a class="dropdown-item" href="cycle.html">Cycle</a>
+            <a class="dropdown-item" href="paddle.html">Paddle</a>
+            <a class="dropdown-item" href="snow.html">Snow</a>
+            <a class="dropdown-item" href="photo.html">Photography/Drone</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../about.html">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../contact.html">Contact</a>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0" style="visibility: hidden; width: 100px;">
+        <input class="form-control mr-sm-2" type="search" placeholder="Find product..." aria-label="Search">
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <a class="nav-link" href="../cart.html">
+        <i class="cart fas fa-shopping-cart" style="color: rgb(95, 143, 167);">
+
+          <span class="cart_item_number">
+            0
+          </span>
+
+        </i>
+      </a>
+    </div>
+  </div>
+  </nav>
+
+  <!-- Title -->
+  <div class="home">
+    <div class="home_background" style="background-image:url(../res/cycle_res.jpg)">
+      <div class="home_picture_title_container">
+        <div class="home_title">
+          Cycle
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container products">
+      <!-- filled dynamically -->
+  </div>
+
+  <!-- Footer -->
+  <footer class="container py-5" style="margin-bottom: -1.5%; margin-top: 6.5%;">
+    <div class="row">
+      <div class="col-12 col-md">
+        <svg style="width:50px;height:50px" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M14,6L10.25,11L13.1,14.8L11.5,16C9.81,13.75 7,10 7,10L1,18H23L14,6Z" />
+      </svg>
+        <small class="d-block mb-3 text-muted">E-Business</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Shop</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="camp_hike.html">Camp/Hike</a></li>
+          <li><a class="text-muted" href="climbing.html">Climbing</a></li>
+          <li><a class="text-muted" href="cycle.html">Cycle</a></li>
+          <li><a class="text-muted" href="paddle.html">Paddle</a></li>
+          <li><a class="text-muted" href="photo.html">Photography/Drone</a></li>
+          <li><a class="text-muted" href="snow.html">Snow</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="../about.html">About Us</a></li>
+          <li><a class="text-muted" href="../sources.html">Sources</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Contact</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Email</a></li>
+          <li><a class="text-muted" href="#">Facebook</a></li>
+          <li><a class="text-muted" href="#">Instagram</a></li>
+          <li><a class="text-muted" href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="footerfooter" style="text-align: center; background-color: #f5f5f5;">
+    <span class="text-muted">Copyright &copy; 2020 All Rights Reserved</span>
+  </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-database.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA8qvjuoYOt7jzHgFFMABKdqiedh5yKqMo",
+      authDomain: "e-business2020.firebaseapp.com",
+      databaseURL: "https://e-business2020.firebaseio.com",
+      projectId: "e-business2020",
+      storageBucket: "e-business2020.appspot.com",
+      messagingSenderId: "791894279822",
+      appId: "1:791894279822:web:43fb8bf86953dab847ebdf"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="../js/category.js"></script>
+</body>
+
+</html>
