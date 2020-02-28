@@ -1,15 +1,6 @@
-# E-Business2020
+# E-Business 2020: Alpine Rentals
+Created by Tejas Narayanan, Sreehari Rammohan, and Seif Abdelaziz
 
-### CSV Format
-id,name,price,path_to_image,description
+Cupertino High School FBLA
 
-### Item IDs
-1xxxx: Camp and Hike
-2xxxx: Climbing
-3xxxx: Cycle
-4xxxx: Paddle
-5xxxx: Photo
-6xxxx: Snow
-
-### Image Location
-res/{id}.jpg
+Bay Section, California
